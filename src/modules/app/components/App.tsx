@@ -1,17 +1,22 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+// import logo from '../svg/logo.svg'
+// import './App.css'
 
-function App() {
+export const App = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="text-center">
+      <header className="flex flex-col gap-6 justify-center items-center h-screen text-xl text-white bg-[#282c34]">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button
+            aria-label="Incrementar"
+            className="py-2 px-4 text-black bg-white"
+            type="button"
+            onClick={() => setCount((count) => count + 1)}
+          >
             count is: {count}
           </button>
         </p>
@@ -20,7 +25,7 @@ function App() {
         </p>
         <p>
           <a
-            className="App-link"
+            className="text-[#61dafb]"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,7 +34,7 @@ function App() {
           </a>
           {' | '}
           <a
-            className="App-link"
+            className="text-[#61dafb]"
             href="https://vitejs.dev/guide/features.html"
             target="_blank"
             rel="noopener noreferrer"
@@ -41,5 +46,3 @@ function App() {
     </div>
   )
 }
-
-export default App
